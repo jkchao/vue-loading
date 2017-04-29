@@ -24,7 +24,7 @@
     "webpack-dev-server": "^2.2.0",
     "raw-loader": "^0.5.1"
   },
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jkchao/vue-loading.git"
