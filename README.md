@@ -16,7 +16,7 @@ demo: https://jkchao.github.io/vue-loading/
 
 ## Options
 
-![](https://dn-mhke0kuv.qbox.me/e6139074f3316065b652.png)
+![](./public/options.png)
 
 ## Example in SPA
 
