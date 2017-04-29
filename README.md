@@ -16,8 +16,22 @@ demo: https://jkchao.github.io/vue-loading/
 
 ## Options
 
-![](./public/options.png)
+1. type: SVG type
+  Type: `String`
+  Required: `false`
+  Default: `balls`
 
+  Some type you can choose: 'balls', 'bars', 'beat', 'bubbles', 'cylon', 'spin', 'spiningDubbles', 'barsCylon'
+
+2. color: SVG color
+  Type: `String`
+  Required: `false`
+  Default: `#5ac1dd`
+
+3. size: SVG size,including width and height.
+  Type: `Object`
+  Required: `false`
+  Default: `{ width: '40px', height: '40px' }`
 ## Example in SPA
 
 ```javascript
