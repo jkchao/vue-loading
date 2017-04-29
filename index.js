@@ -4,5 +4,9 @@
  */
 
 import vueLoading from './src/components/loading.vue'
-
-module.exports = vueLoading
+// 导出模块
+export default vueLoading;
+//global 情况下 自动安装
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.component('vue-loading', vueLoading)
+}
