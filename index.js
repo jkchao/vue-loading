@@ -1,3 +1,8 @@
-import vueLoading from './src/components/vueLoading.vue'
+/**
+ * Vue-loading-template
+ * @author jkchao
+ */
 
-export { vueloading }
+import vueLoading from './src/components/loading.vue'
+
+module.exports = vueLoading
