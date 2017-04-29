@@ -13,7 +13,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#FF6700'
+      default: '#5ac1dd'
     },
     size: { default: () => ({ width: '30px', height: '30px' })}
   },
