@@ -5,8 +5,10 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
+    library: 'vueLoading',
+    libraryTarget: 'umd',
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vueLoading.js'
   },
   module: {
     rules: [
@@ -39,7 +41,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue'  : 'vue/dist/vue.min'
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   devServer: {
