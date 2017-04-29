@@ -16,11 +16,7 @@ demo: https://jkchao.github.io/vue-loading/
 
 ## Options
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 | 
-| :------------- |:------------- | :-----|
-| type | SVG类型 | String | 'balls', 'bars', 'beat', 'bubbles', 'cylon', 'spin', 'spiningDubbles', 'barsCylon' | 'balls' |
-| color | SVG 颜色 | String | - | '#5ac1dd' |
-| size | SVG大小 | Object | - | { width: '40px', height: '40px' } | 
+![](https://dn-mhke0kuv.qbox.me/e6139074f3316065b652.png)
 
 ## Example in SPA
 
