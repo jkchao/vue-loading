@@ -3,7 +3,7 @@
  * @author jkchao
  */
 
-import vueLoading from './src/components/loading.vue'
+import vueLoading from './components/loading.vue'
 
 // 导出模块
 export default vueLoading
