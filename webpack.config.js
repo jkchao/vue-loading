@@ -8,8 +8,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-loading-template.min.js',
-    library: 'vueLoading',
+    filename: 'vue-loading.min.js',
+    library: 'vue-loading',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -34,12 +34,16 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      { 
+        test: /\.svg$/,
+        loader: 'raw-loader'
+      },  
     ]
   },
   resolve: {
