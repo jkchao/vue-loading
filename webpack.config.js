@@ -1,25 +1,32 @@
-var path = require('path')
-var webpack = require('webpack')
-
+const path = require('path')
+const webpack = require('webpack')
+function resolve(dir) {
+  return path.join(__dirname, '..', dir)
+}
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'vue-loading-template.min.js',
     library: 'vueLoading',
     libraryTarget: 'umd',
-    publicPath: '/dist/',
-    filename: 'vueLoading.js'
+    umdNamedDefine: true
   },
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
         options: {
-          loaders: {
-          }
-          // other vue-loader options go here
+          formatter: require('eslint-friendly-formatter')
         }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
@@ -27,21 +34,25 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
         }
-      },
-      { 
-        test: /\.svg$/,
-        loader: 'raw-loader'
       }
     ]
   },
   resolve: {
     alias: {
-      'vue'  : 'vue/dist/vue.min'
+      vue$: 'vue/dist/vue.esm.js'
+    }
+  },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
     }
   },
   devServer: {
@@ -51,7 +62,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
