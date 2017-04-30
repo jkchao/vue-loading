@@ -4,7 +4,7 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 module.exports = {
-  entry: './src/main.js',
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
