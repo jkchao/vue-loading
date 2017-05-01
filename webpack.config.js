@@ -1,8 +1,6 @@
-const path = require('path')
-const webpack = require('webpack')
-function resolve(dir) {
-  return path.join(__dirname, '..', dir)
-}
+var path = require('path')
+var webpack = require('webpack')
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -16,17 +14,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
-      {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+          }
+          // other vue-loader options go here
+        }
       },
       {
         test: /\.js$/,
@@ -48,7 +42,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue$: 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   externals: {
@@ -66,7 +60,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#source-map'
+  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -89,3 +83,4 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
+
