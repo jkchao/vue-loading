@@ -40,7 +40,7 @@ demo: https://jkchao.github.io/vue-loading/
 
   Required: `false`
   
-  Default: `{ width: '40px', height: '40px' }`
+  Default: `{ width: '30px', height: '30px' }`
 
 ## Example in SPA
 
