@@ -50,7 +50,7 @@ demo: https://jkchao.github.io/vue-loading/
     <vue-loading type="bars" color="#d9544e" :size="{ width: '50px', height: '50px' }"><vue-loading>
  <template>
   <script>
-  import vueLoading from './components/loading.vue'
+  import vueLoading from 'vue-loading-template'
   export default {
     name: 'app',
     components: {
