@@ -4,47 +4,54 @@
 
 Use SVG for loading.
 
-demo: https://jkchao.github.io/vue-loading/
+Demo: https://jkchao.github.io/vue-loading/
 
 ## Start
 
-```javascript
-
-  npm install vue-loading-template --save
-
+```bash
+npm install vue-loading-template --save
 ```
 
 ## Options
 
-1. type: SVG type
-
-  Type: `String`
-
-  Required: `false`
-
-  Default: `balls`
-
-  Some type you can choose: 'balls', 'bars', 'beat', 'bubbles', 'cylon', 'spin', 'spiningDubbles', 'barsCylon'
-
-2. color: SVG color
-
-  Type: `String`
-
-  Required: `false`
-
-  Default: `#5ac1dd`
-
-3. size: SVG size,including width and height
-
-  Type: `Object`
-
-  Required: `false`
-  
-  Default: `{ width: '30px', height: '30px' }`
+ <table>
+ 	<thead>
+      <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      <th>Available values</th>
+      </tr>
+    </thead>
+	<tbody>
+    	<tr>
+        <td>type</td>
+        <td>String</td>
+        <td>false</td>
+        <td>balls</td>
+        <td>balls, bars, beat, bubbles, cylon, spin, spiningDubbles, barsCylon</td>
+        </tr>
+        <tr>
+        <td>color</td>
+        <td>String</td>
+        <td>false</td>
+        <td>#5ac1dd</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>size</td>
+        <td>Object</td>
+        <td>false</td>
+        <td>{ width: '30px', height: '30px' }</td>
+        <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Example in SPA
 
-```javascript
+```vue
  <template>
     <div>
        <h2>bars</h2>
