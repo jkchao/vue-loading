@@ -4,5 +4,14 @@ export type LoadingType = 'balls' | 'bars' | 'beat' | 'bubbles' | 'cylon' | 'spi
 
 export function install (vue: typeof Vue): void
 
-export class vueLoading extends Vue {}
+export class VueLoading extends Vue {
+  // loading type
+  type: LoadingType
+
+  // loading color
+  color: string
+
+  // loading size
+  size: { width: string, height: string }
+}
 
