@@ -1,29 +1,35 @@
 {
   "name": "vue-loading-template",
   "description": "vue-loading",
-  "version": "0.1.7",
+  "version": "0.5.0",
   "author": "jkchao <jkchaom@gmail.com>",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --dest build",
+    "build-bundle": "vue-cli-service build --target lib --name vueLoading ./src/index.ts",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.2.1"
+    "vue": "^2.5.16",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^6.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-latest": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.2.1",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0",
-    "raw-loader": "^0.5.1"
+    "@vue/cli-plugin-babel": "^3.0.0-rc.2",
+    "@vue/cli-plugin-typescript": "^3.0.0-rc.2",
+    "@vue/cli-service": "^3.0.0-rc.2",
+    "node-sass": "^4.9.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.16"
   },
-  "main": "dist/vue-loading.min.js",
+  "main": "dist/vueLoading.common.js",
+  "types": "typings/index.d.ts",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jkchao/vue-loading.git"

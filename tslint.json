@@ -1,0 +1,238 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "src/utils/**"
+    ]
+  },
+  "jsRules": {},
+  "rules": {
+    // 允许使用 console
+    "no-console": false,
+
+    // 代码块的内容不能为空，禁止空代码块
+    "no-empty": true,
+
+    // 单引号
+    "quotemark": false,
+
+    // 不加分号
+    "semicolon": [
+      true,
+      "never"
+    ],
+
+    // 如果一个变量声明后不再被修改，那么应使用 const 来声明该变量
+    "prefer-const": true,
+
+    // 设置成员对象的访问权限（public,private,protect)
+    "member-access": true,
+    
+    // 设置修饰符顺序
+    "member-ordering": [
+      true,
+      {
+      "order": [
+          "public-static-field",
+          "public-static-method",
+          "protected-static-field",
+          "protected-static-method",
+          "private-static-field",
+          "private-static-method",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+
+    // 不允许空接口
+    "no-empty-interface": true,
+
+    // 允许修改方法输入参数
+    "no-parameter-reassignment": true,
+
+    // 如果for循环中没有使用索引，建议是使用for-of
+    "prefer-for-of": true,
+
+    // 不允许没有Promise的情况下使用await
+    "await-promise": true,
+
+    // if/for/do/while强制使用大括号 同行除外
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+
+    // f使用for in语句时，强制进行hasOwnProperty检查
+    "forin": true,
+
+    // 不允许使用arguments.callee,
+    "no-arg": true,
+
+    // 不允许使用特殊运算符 &, &=, |, |=, ^, ^=, <<, <<=, >>, >>=, >>>, >>>=, ~
+    "no-bitwise": true,
+
+    // do while/for/if/while 语句中将会对例如if(a=b)进行检查
+    "no-conditional-assignment": true,
+
+    // no-eval
+    "no-eval": true,
+
+    // 不允许使用 var
+    "no-var-keyword": true,
+
+    // 不允许 debugger
+    "no-debugger": true,
+
+    // 不允许super() 两次使用在构造函数中
+    "no-duplicate-super": true,
+
+    // 只允许在模板字符串中使用${
+    "no-invalid-template-strings": true,
+
+    // 不允许在class之外使用this
+    "no-invalid-this": true,
+
+    // 不允许使用null,使用undefined代替null，指代空指针对象
+    "no-null-keyword": true,
+
+    // 不允许 array 中有空元素
+    "no-sparse-arrays": true,
+
+    // 不允许throw一个字符串
+    "no-string-throw": true,
+
+    // 不允许在finally语句中使用return/continue/break/throw
+    "no-unsafe-finally": true,
+
+    // 不允许使用未使用的表达式
+    "no-unused-expression": true,
+
+    // 在使用前必须声明
+    "no-use-before-declare": true,
+
+    // parseInt时，必须输入radix精度参数
+    "radix": true,
+
+    // 不允许自动类型转换，如果已设置不允许使用关键字var该设置无效
+    "restrict-plus-operands": true,
+
+    // 必须使用恒等号，进行等于比较
+    "triple-equals": true,
+
+    // 只允许使用isNaN方法检查数字是否有效
+    "use-isnan": true,
+
+    // 每行开始以4个空格符开始
+    "indent": [true, "spaces", 2],
+
+    // 禁止在一个文件内，多次引用同一module
+    "no-duplicate-imports": true,
+
+    // 建议使用T[]方式声明一个数组对象
+    "array-type": [true, "array"],
+
+    // 类名以大驼峰格式命名
+    "class-name": true,
+
+    // 定义注释格式
+    "comment-format": [true, "check-space"],
+
+    // 定义编码格式默认utf-8
+    "encoding": true,
+
+    // import关键字后加空格
+    "import-spacing": true,
+
+    // interface必须以I开头
+    "interface-name": false,
+
+    // 注释基于jsdoc风格
+    "jsdoc-format": true,
+
+    // 调用构造函数时需要用括号
+    "new-parens": true,
+
+    // 不允许有空行
+    "no-consecutive-blank-lines": [true,2],
+
+    // 不允许空格结尾
+    "no-trailing-whitespace": true,
+
+    // 不允许没有必要的初始化
+    "no-unnecessary-initializer": true,
+
+    // 定义变量命名规则
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-leading-underscore",
+      "allow-trailing-underscore",
+      "ban-keywords"
+    ],
+
+    // 句尾逗号
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+
+    // 不允许case段落中在没有使用breack的情况下，在新启一段case逻辑
+    "no-switch-case-fall-through": true,
+
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+
+    // 可以对象字面量断言
+    "no-object-literal-type-assertion": false,
+
+    // function paren 前需要有空格
+    "space-before-function-paren": true,
+
+    // 可以导入子包
+    "no-submodule-imports": false,
+
+    // 可以覆盖变量命名
+    "no-shadowed-variable": false,
+
+    // 导入包时，不需要按字母排序
+    "ordered-imports": false,
+
+    "object-literal-key-quotes": false,
+
+    "object-literal-sort-keys": false,
+
+    // 允许带一个参数的箭头函数省去括号
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+
+    // 对齐方式
+    "align": [
+      true,
+      "parameters",
+      "statements",
+      "members",
+      "elements"
+    ]
+  },
+  "rulesDirectory": []
+}
