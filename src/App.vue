@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { vueLoading } from './index.ts'
+import { VueLoading } from './index.ts'
 export default {
   name: 'app',
   components: {

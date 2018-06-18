@@ -5,13 +5,13 @@
 
 import Vue from 'vue'
 
-import vueLoading from '@/components/Loading.vue'
+import VueLoading from '@/components/Loading.vue'
 
 const install = (vue: typeof Vue) => {
-  vue.component('vue-loading', vueLoading)
+  vue.component('vue-loading', VueLoading)
 }
 
 // 导出模块
-export { vueLoading, install }
+export { VueLoading, install }
 
-export default { vueLoading, install }
+export default { VueLoading, install }
