@@ -26,7 +26,7 @@ export default class VueLoading extends Vue {
   private size: { width: string, height: string }
 
   private get svg () {
-    return  (svgLoading as any)[this.type]
+    return  (svgLoading as { [key: string ]: any })[this.type]
   }
 
   private get loadingStyle () {
