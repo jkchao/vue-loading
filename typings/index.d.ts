@@ -1,10 +1,12 @@
 import Vue from 'vue'
 
-export type LoadingType = 'balls' | 'bars' | 'beat' | 'bubbles' | 'cylon' | 'spin' | 'spiningDubbles' | 'barsCylon'
+type LoadingType = 'balls' | 'bars' | 'beat' | 'bubbles' | 'cylon' | 'spin' | 'spiningDubbles' | 'barsCylon'
 
-export function install (vue: typeof Vue): void
+declare class Component extends Vue {
+  static install (vue: typeof Vue): void
+}
 
-export class VueLoading extends Vue {
+declare class VueLoading extends Component {
   // loading type
   type: LoadingType
 
@@ -15,3 +17,6 @@ export class VueLoading extends Vue {
   size: { width: string, height: string }
 }
 
+export { VueLoading, LoadingType }
+
+export default VueLoading
