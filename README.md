@@ -59,15 +59,25 @@ npm install vue-loading-template --save
     </div>
  </template>
   <script>
-  import vueLoading from 'vue-loading-template'
+  import { VueLoading } from 'vue-loading-template'
   export default {
     name: 'app',
     components: {
-      vueLoading
+      VueLoading
     }
   }
   </script>
 ```
+
+Or you can install it in your `main.ts`
+
+```vue
+// main.ts
+import Vue from 'vue'
+import VueLoading from 'vue-loading-template'
+Vue.use(VueLoading)
+```
+
 
 ## License
 

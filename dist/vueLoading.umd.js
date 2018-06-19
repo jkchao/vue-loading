@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vueLoading"] = factory(require("vue"));
+		exports["VueLoading"] = factory(require("vue"));
 	else
-		root["vueLoading"] = factory(root["Vue"]);
+		root["VueLoading"] = factory(root["Vue"]);
 })(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_i7_w__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -516,6 +516,10 @@ var component = normalizeComponent(
 
 /* harmony default export */ var Loading = (component.exports);
 // CONCATENATED MODULE: ./src/index.ts
+/**
+ * Vue-loading-template
+ * @author jkchao
+ */
 
 
 var src_install = function install(vue) {
@@ -525,11 +529,11 @@ var src_install = function install(vue) {
 
 
 /* harmony default export */ var src = ({
-  vueLoading: Loading,
+  VueLoading: Loading,
   install: src_install
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "vueLoading", function() { return Loading; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "VueLoading", function() { return Loading; });
 /* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "install", function() { return src_install; });
 
 
@@ -3107,4 +3111,4 @@ module.exports = function (key) {
 
 /******/ });
 });
-//# sourceMappingURL=vueLoading.umd.js.map
+//# sourceMappingURL=VueLoading.umd.js.map

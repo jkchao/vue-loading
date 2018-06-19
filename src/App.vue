@@ -36,14 +36,16 @@
   </div>
 </template>
 
-<script>
-import { VueLoading } from './index.ts'
-export default {
-  name: 'app',
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import { VueLoading } from './index'
+
+@Component({
   components: {
-    vueLoading
+    VueLoading
   }
-}
+})
+export default class App extends Vue {}
 </script>
 
 <style>

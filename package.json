@@ -1,12 +1,12 @@
 {
   "name": "vue-loading-template",
   "description": "vue-loading",
-  "version": "0.5.0",
+  "version": "1.0.1",
   "author": "jkchao <jkchaom@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest build",
-    "build-bundle": "vue-cli-service build --target lib --name vueLoading ./src/index.ts",
+    "build-bundle": "vue-cli-service build --target lib --name VueLoading ./src/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.16"
   },
-  "main": "dist/vueLoading.common.js",
+  "main": "dist/VueLoading.common.js",
   "types": "typings/index.d.ts",
   "browserslist": [
     "> 1%",
