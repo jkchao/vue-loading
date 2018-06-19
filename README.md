@@ -69,9 +69,9 @@ npm install vue-loading-template --save
   </script>
 ```
 
-Or you can install it in your `main.ts`
+Or you can install it in your `main.ts(main.js)`
 
-```vue
+```javascript 
 // main.ts
 import Vue from 'vue'
 import VueLoading from 'vue-loading-template'
