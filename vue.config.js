@@ -1,5 +1,7 @@
 module.exports = {
-  assetsDir: './',
+  baseUrl: process.env.NODE_ENV === 'production'
+    ? '/vue-loading/'
+    : '/',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 
