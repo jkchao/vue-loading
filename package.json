@@ -1,7 +1,7 @@
 {
   "name": "vue-loading-template",
   "description": "vue-loading",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "jkchao <jkchaom@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
