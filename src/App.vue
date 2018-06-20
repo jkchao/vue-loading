@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { VueLoading } from './index'
+import VueLoading from './components/loading.vue'
 
 @Component({
   components: {

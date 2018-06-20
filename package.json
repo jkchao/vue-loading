@@ -5,7 +5,7 @@
   "author": "jkchao <jkchaom@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --dest build",
+    "build": "vue-cli-service build --dest docs",
     "build-bundle": "vue-cli-service build --target lib --name VueLoading ./src/index.ts",
     "lint": "vue-cli-service lint"
   },
