@@ -23,4 +23,4 @@ declare class VueLoading extends Vue implements VueLoadingOptions {
 
 export { VueLoading, LoadingType, VueLoadingOptions }
 
-export default install
+export default { install }

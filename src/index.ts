@@ -14,4 +14,4 @@ const install = (vue: typeof Vue) => {
 // 导出模块
 export { VueLoading, install }
 
-export default { VueLoading, install }
+export default { install }
