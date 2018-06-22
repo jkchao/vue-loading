@@ -4,25 +4,20 @@ type LoadingType = 'balls' | 'bars' | 'beat' | 'bubbles' | 'cylon' | 'spin' | 's
 
 interface VueLoadingOptions {
   // loading type
-  type?: LoadingType
+  type: LoadingType
 
   // loading color
-  color?: string
+  color: string
 
   // loading size
-  size?: { width: string, height: string }
-}
-
-declare function install(vue: typeof Vue): void
-
-declare class VueLoading extends Vue implements VueLoadingOptions {
-  type: LoadingType
-  color: string
   size: { width: string, height: string }
 }
 
+declare function install(vue: typeof Vue, options?: VueLoadingOptions): void
+
+declare class VueLoading extends Vue {}
+
 declare const _default: {
-  VueLoading: typeof VueLoading,
   install: typeof install
 }
 
