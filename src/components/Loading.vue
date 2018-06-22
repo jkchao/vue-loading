@@ -22,7 +22,7 @@ export default class VueLoading extends Vue {
   @Prop({ default: '#5ac1dd'})
   private color: string
 
-  @Prop({ default: { width: '30px', height: '30px' }})
+  @Prop({ default: () => ({ width: '30px', height: '30px' })})
   private size: { width: string, height: string }
 
   private get svg () {
