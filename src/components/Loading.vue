@@ -16,13 +16,13 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
   name: 'vueLoading'
 })
 export default class VueLoading extends Vue {
-  @Prop({ default: 'bead' })
+  @Prop({ default: 'bead', type: String, required: false })
   private type: string
 
-  @Prop({ default: '#5ac1dd'})
+  @Prop({ default: '#5ac1dd', type: String, required: false})
   private color: string
 
-  @Prop({ default: () => ({ width: '30px', height: '30px' })})
+  @Prop({ default: () => ({ width: '30px', height: '30px' }), type: Object, required: false})
   private size: { width: string, height: string }
 
   private get svg () {
