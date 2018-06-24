@@ -1,13 +1,4 @@
-<template>
-  <div
-    class="vue-loading"
-    v-html="svg"
-    :style="loadingStyle">
-    
-  </div>
-</template>
 
-<script lang="ts">
 import * as svgLoading from '../svg'
 
 import { Component, Vue, Prop } from 'vue-property-decorator'
@@ -36,12 +27,14 @@ export default class VueLoading extends Vue {
       height: this.size.height
     }
   }
-}
 
-</script>
-
-<style lang="scss" scoped>
-.vue-loading {
-  margin: auto;
+  private render () {
+    return (
+      <div
+        class="vue-loading"
+        v-html="svg"
+        style={ this.loadingStyle }>
+      </div>
+    )
+  }
 }
-</style>
