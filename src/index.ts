@@ -19,14 +19,18 @@ const install = (
   vue: typeof Vue,
   options?: VueLoadingOptions
 ) => {
-  if (options && Object.keys(options).length !== 0) {
+
+  if (options) {
     const componentProps = new VueLoading().$options.props as Props
-    componentProps.type.default = options.type
-    componentProps.color.default = options.color
-    componentProps.size.default = () => options.size
+
+    componentProps.type.default = options.type || 'balls'
+    componentProps.color.default = options.color || '#5ac1dd'
+    componentProps.size.default = () => options.size || { width: '30px', height: '30px' }
   }
 
+
   vue.component('vue-loading', VueLoading)
+
 }
 
 
