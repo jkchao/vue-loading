@@ -1,6 +1,7 @@
 {
   "include": [
     "src/**/*.ts",
+    "src/**/*.tsx",
     "src/**/*.vue",
   ],
   "exclude": [
@@ -34,22 +35,28 @@
     "allowSyntheticDefaultImports": true,
     // 启用装饰器
     "experimentalDecorators": true,
+    // 
+    "emitDecoratorMetadata": true,
     // 允许编译javascript文件
     "allowJs": true,
     // 采用的模块系统
     "module": "esnext",
     // 编译输出目标 ES 版本
-    "target": "es5",
+    "target": "esnext",
     // 如何处理模块
     "moduleResolution": "node",
     // 在表达式和声明上有隐含的any类型时报错
     "noImplicitAny": true,
+    // 导入辅助函数
+    "importHelpers": true,
     "lib": [
       "dom",
+      "dom.iterable",
       "es5",
       "es6",
       "es7",
-      "es2015.promise"
+      "es2015.promise",
+      "scripthost"
     ],
     "sourceMap": true,
     "pretty": true
