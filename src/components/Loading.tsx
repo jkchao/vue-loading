@@ -32,7 +32,7 @@ export default class VueLoading extends Vue {
     return (
       <div
         class="vue-loading"
-        v-html="svg"
+        domPropsInnerHTML={ this.svg }
         style={ this.loadingStyle }>
       </div>
     )
