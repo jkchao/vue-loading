@@ -5,7 +5,7 @@
 
 import Vue from 'vue'
 
-import VueLoading from '@/components/Loading'
+import VueLoading from '@/components/Loading.vue'
 import { VueLoadingOptions } from '../typings/index'
 
 interface Props {

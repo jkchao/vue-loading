@@ -1,3 +1,4 @@
+<script lang="tsx">
 
 import * as svgLoading from '../svg'
 
@@ -32,9 +33,17 @@ export default class VueLoading extends Vue {
     return (
       <div
         class="vue-loading"
-        domPropsInnerHTML={ this.svg }
+        domPropsInnerHTML={this.svg}
         style={ this.loadingStyle }>
       </div>
     )
   }
 }
+</script scoped>
+
+<style scoped>
+.vue-loading {
+  margin: auto;
+}
+</style>
+

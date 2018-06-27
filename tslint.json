@@ -5,8 +5,7 @@
   ],
   "linterOptions": {
     "exclude": [
-      "node_modules/**",
-      "src/utils/**"
+      "node_modules/**"
     ]
   },
   "jsRules": {},
@@ -37,33 +36,33 @@
       true,
       {
       "order": [
-          "public-static-field",
-          "public-static-method",
-          "protected-static-field",
-          "protected-static-method",
           "private-static-field",
           "private-static-method",
-          "public-instance-field",
-          "protected-instance-field",
+          "protected-static-field",
+          "protected-static-method",
+          "public-static-field",
+          "public-static-method",
           "private-instance-field",
-          "public-constructor",
-          "protected-constructor",
+          "protected-instance-field",
+          "public-instance-field",
           "private-constructor",
-          "public-instance-method",
+          "protected-constructor",
+          "public-constructor",
+          "private-instance-method",
           "protected-instance-method",
-          "private-instance-method"
+          "public-instance-method"
         ]
       }
     ],
 
     // 不允许空接口
-    "no-empty-interface": true,
+    "no-empty-interface": false,
 
-    // 允许修改方法输入参数
+    // 不允许修改方法输入参数
     "no-parameter-reassignment": true,
 
     // 如果for循环中没有使用索引，建议是使用for-of
-    "prefer-for-of": true,
+    "prefer-for-of": false,
 
     // 不允许没有Promise的情况下使用await
     "await-promise": true,
@@ -101,11 +100,9 @@
     // 只允许在模板字符串中使用${
     "no-invalid-template-strings": true,
 
-    // 不允许在class之外使用this
-    "no-invalid-this": true,
 
     // 不允许使用null,使用undefined代替null，指代空指针对象
-    "no-null-keyword": true,
+    // "no-null-keyword": true,
 
     // 不允许 array 中有空元素
     "no-sparse-arrays": true,
@@ -117,7 +114,7 @@
     "no-unsafe-finally": true,
 
     // 不允许使用未使用的表达式
-    "no-unused-expression": true,
+    "no-unused-expression": false,
 
     // 在使用前必须声明
     "no-use-before-declare": true,
@@ -149,9 +146,6 @@
     // 定义注释格式
     "comment-format": [true, "check-space"],
 
-    // 定义编码格式默认utf-8
-    "encoding": true,
-
     // import关键字后加空格
     "import-spacing": true,
 
@@ -167,6 +161,18 @@
     // 不允许有空行
     "no-consecutive-blank-lines": [true,2],
 
+    "whitespace": [
+      true,
+      "check-branch",
+      // "check-decl",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-type-operator"
+      // "check-preblock"
+    ],
+
     // 不允许空格结尾
     "no-trailing-whitespace": true,
 
@@ -179,6 +185,7 @@
       "check-format",
       "allow-leading-underscore",
       "allow-trailing-underscore",
+      "allow-pascal-case",
       "ban-keywords"
     ],
 
@@ -191,13 +198,17 @@
       }
     ],
 
+    "max-classes-per-file": false,
+
+
     // 不允许case段落中在没有使用breack的情况下，在新启一段case逻辑
     "no-switch-case-fall-through": true,
 
+    "no-angle-bracket-type-assertion": false,
+
     "one-line": [
       true,
-      "check-open-brace",
-      "check-whitespace"
+      "check-open-brace"
     ],
 
     // 可以对象字面量断言
@@ -226,13 +237,10 @@
     ],
 
     // 对齐方式
-    "align": [
-      true,
-      "parameters",
-      "statements",
-      "members",
-      "elements"
-    ]
+    "align": false,
+
+    // 允许使用 namespace
+    "no-namespace": false
   },
   "rulesDirectory": []
 }
