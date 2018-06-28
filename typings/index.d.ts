@@ -4,13 +4,13 @@ type LoadingType = 'balls' | 'bars' | 'beat' | 'bubbles' | 'cylon' | 'spin' | 's
 
 interface VueLoadingOptions {
   // loading type
-  type: LoadingType
+  type?: LoadingType
 
   // loading color
-  color: string
+  color?: string
 
   // loading size
-  size: { width: string, height: string }
+  size?: { width: string, height: string }
 }
 
 declare function install(vue: typeof Vue, options?: VueLoadingOptions): void
