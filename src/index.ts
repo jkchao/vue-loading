@@ -6,7 +6,7 @@
 import Vue from 'vue'
 
 import VueLoading from '@/components/Loading.vue'
-import { VueLoadingOptions } from '../typings/index'
+import { VueLoadingOptions } from '../typings'
 
 interface Props {
   type: { default: string },
