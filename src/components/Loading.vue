@@ -39,7 +39,7 @@ export default class VueLoading extends Vue {
     )
   }
 }
-</script scoped>
+</script>
 
 <style scoped>
 .vue-loading {
