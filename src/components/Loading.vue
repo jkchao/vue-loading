@@ -4,9 +4,7 @@ import * as svgLoading from '../svg'
 
 import { Component, Vue, Prop } from 'vue-property-decorator'
 
-interface StyleLoading {
-  [key: string]: any
-}
+type StyleLoading = Record<string, any>
 
 @Component({
   name: 'vueLoading'
