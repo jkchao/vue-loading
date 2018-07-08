@@ -38,12 +38,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import VueLoading from './components/Loading.vue'
+// import VueLoading from './components/Loading'
 
 @Component({
-  components: {
-    VueLoading
-  }
+  // components: {
+  //   VueLoading
+  // }
 })
 export default class App extends Vue {}
 </script>

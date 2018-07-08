@@ -1,7 +1,10 @@
+<script lang="tsx">
 
 import * as svgLoading from '../svg'
 
 import { Component, Vue, Prop } from 'vue-property-decorator'
+
+type StyleLoading = Record<string, any>
 
 @Component({
   name: 'vueLoading'
@@ -17,7 +20,7 @@ export default class VueLoading extends Vue {
   private size: { width: string, height: string }
 
   private get svg () {
-    return  (svgLoading as { [key: string ]: any })[this.type]
+    return  (svgLoading as StyleLoading)[this.type]
   }
 
   private get loadingStyle () {
@@ -32,9 +35,17 @@ export default class VueLoading extends Vue {
     return (
       <div
         class="vue-loading"
-        v-html="svg"
+        domPropsInnerHTML={this.svg}
         style={ this.loadingStyle }>
       </div>
     )
   }
 }
+</script>
+
+<style scoped>
+.vue-loading {
+  margin: auto;
+}
+</style>
+

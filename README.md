@@ -69,15 +69,28 @@ npm install vue-loading-template --save
   </script>
 ```
 
-Or you can install it in your `main.ts(main.js)`
+Or you can install it in your `main.js`
 
-```javascript 
-// main.ts
+```javascript
+// main.js
 import Vue from 'vue'
 import VueLoading from 'vue-loading-template'
-Vue.use(VueLoading)
+Vue.use(VueLoading, /** options **/)
 ```
 
+If you use it in TypeScript, you can:
+
+```typescript
+// main.ts
+import Vue from 'vue'
+import vueLoading, { VueLoadingOptions } from 'vue-loading-template'
+
+Vue.use<VueLoadingOptions>(VueLoading, /** options **/)
+```
+
+so, you will receive the tip about optional options.
+
+![](http://ovshyp9zv.bkt.clouddn.com/WechatIMG98.jpeg)
 
 ## License
 
